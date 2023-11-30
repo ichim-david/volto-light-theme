@@ -55,6 +55,3 @@ context('Navigation Acceptance Tests', () => {
 
   });
 });
-
-
-
