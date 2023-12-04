@@ -20,10 +20,6 @@ const messages = defineMessages({
     id: 'Close menu',
     defaultMessage: 'Close menu',
   },
-  closeMenu: {
-    id: 'Close menu',
-    defaultMessage: 'Close menu',
-  },
 });
 
 const Navigation = ({ pathname }) => {
