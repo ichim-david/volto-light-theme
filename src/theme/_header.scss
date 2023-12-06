@@ -1,3 +1,9 @@
+$header-background-color: $lightgrey !default;
+$header-background-color-hover: $darkGrey !default;
+$search-button-background-color-hover: $darkGrey !default;
+$header-text-color: $black !default;
+$header-text-color-hover: $white !default;
+
 .header-wrapper .header {
   display: flex;
   flex-direction: column-reverse;
@@ -32,7 +38,7 @@
         a.item {
           padding: 0 5px;
           margin: 0 5px;
-          color: $black;
+          color: $header-text-color;
           font-size: 18px;
           font-weight: 600;
           line-height: 24px;
@@ -50,7 +56,7 @@
           a.item {
             width: 100%;
             padding: 2rem 1.2rem 1.5rem 1.2rem;
-            color: $black;
+            color: $header-text-color;
             font-size: 18px;
 
             &.active {
@@ -106,8 +112,8 @@
         }
 
         &:hover {
-          background-color: $darkGrey;
-          color: $white;
+          background-color: $search-button-background-color-hover;
+          color: $header-text-color-hover;
           cursor: pointer;
 
           svg {
@@ -130,7 +136,7 @@
         width: 100%;
         height: 90px;
         padding-top: 2rem;
-        background-color: $lightgrey;
+        background-color: $header-background-color;
         transition:
           top 500ms ease-in-out,
           height 600ms ease-in-out;
@@ -176,8 +182,8 @@
                 width: 70%;
                 padding-left: 0;
                 margin-right: 1rem;
-                background-color: $lightgrey;
-                color: $black;
+                background-color: $header-background-color;
+                color: $header-text-color;
                 font-size: 1.5rem;
 
                 @media only screen and (min-width: $tablet-breakpoint) and (max-width: 788px) {
@@ -185,7 +191,7 @@
                 }
 
                 &::placeholder {
-                  color: $black;
+                  color: $header-text-color;
                   opacity: 0.5;
                 }
               }
@@ -198,14 +204,14 @@
 
                 &:hover {
                   border-radius: 50%;
-                  background-color: $darkGrey;
+                  background-color: $header-background-color-hover;
                   svg {
-                    fill: $white !important;
+                    fill: $header-text-color-hover !important;
                   }
                 }
 
                 svg {
-                  fill: $black !important;
+                  fill: $header-text-color !important;
                 }
               }
             }
@@ -234,7 +240,7 @@
 
     .tools a {
       margin-right: 10px;
-      color: $black;
+      color: $header-text-color;
       font-size: 14px;
       text-align: center;
     }
@@ -252,7 +258,7 @@
 
       a {
         margin-right: 10px;
-        color: $black;
+        color: $header-text-color;
       }
 
       &:after {
@@ -275,7 +281,7 @@
 
   .item {
     position: relative;
-    color: $black;
+    color: $header-text-color;
     font-size: 18px;
     font-weight: 600;
     line-height: 24px;
@@ -355,7 +361,7 @@
       display: none;
       height: auto;
       padding: 50px 102px 70px;
-      background: $lightgrey;
+      background: $header-background-color;
       box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.25);
 
       @media only screen and (min-width: $tablet-breakpoint) and (max-width: $computer-breakpoint) {
@@ -381,7 +387,7 @@
           li {
             padding: 0;
             padding-bottom: 10px;
-            color: $white;
+            color: $header-text-color-hover;
 
             a {
               font-size: 14px;
@@ -402,10 +408,10 @@
         right: 75px;
         border: 0;
         margin-left: 28px;
-        color: $black;
+        color: $header-text-color;
         cursor: pointer;
         &:focus {
-          outline: 1px solid $black;
+          outline: $border-default;
         }
       }
 
@@ -416,7 +422,7 @@
           position: relative;
           display: inline-block;
           margin-left: 25px;
-          color: $black;
+          color: $header-text-color;
           @include introduction();
           text-align: left;
         }
@@ -495,7 +501,7 @@
       li a {
         display: inline-flex;
         align-items: flex-start;
-        color: $black;
+        color: $header-text-color;
         @include body-text-bold();
 
         span {
@@ -615,8 +621,8 @@
   flex-direction: column;
   padding-bottom: 80px;
   /* line-height: 70px; */
-  background-color: #f4f7f8;
-  color: #fffffe;
+  background-color: $header-background-color;
+  //color: #fffffe; // white on gray bg cannot be read
   font-size: 20px;
   font-weight: 200;
   letter-spacing: 0.3px;
@@ -685,12 +691,12 @@
 
     li a {
       display: inline !important;
-      color: blue;
+      color: $interactive-color;
       text-decoration: underline;
     }
 
     span {
-      color: $black;
+      color: $header-text-color;
     }
 
     .language-selector *:not(:last-child):after {
@@ -737,7 +743,7 @@
     width: 100%;
     padding: 0 30px;
     margin-top: 0;
-    color: $white;
+    color: $header-text-color-hover;
     font-size: 20px;
     list-style: none;
 
@@ -749,7 +755,7 @@
       padding: 20px 0;
       border-bottom: $border-default;
       margin-left: 20px;
-      color: $black;
+      color: $header-text-color;
       line-height: 24px;
 
       .icon:hover {
@@ -779,7 +785,7 @@
       width: 100%;
       align-items: center;
       justify-content: space-between;
-      color: $black;
+      color: $header-text-color;
       line-height: 36px;
     }
 
@@ -793,7 +799,7 @@
         padding: 20px 0 0 10px;
         border: 0px;
         background: transparent;
-        color: $black;
+        color: $header-text-color;
 
         span {
           display: inline-block;
