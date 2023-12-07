@@ -1,8 +1,21 @@
+// Generic header variables
 $header-background-color: $lightgrey !default;
 $header-background-color-hover: $darkGrey !default;
-$search-button-background-color-hover: $darkGrey !default;
 $header-text-color: $black !default;
 $header-text-color-hover: $white !default;
+$header-border-default: $border-default !default;
+$header-outline: 1px solid currentColor !default;
+
+// Search
+$search-button-background-color-hover: $darkGrey !default;
+$search-border: $border-default-small !default;
+
+// Menu
+$desktop-menu-text-color: $header-text-color !default;
+$desktop-menu-border: $border-default-x-large !default;
+$desktop-menu-transparent-border: $border-transparent-x-large !default;
+$mobile-menu-text-color: $header-text-color !default;
+$mobile-menu-border: $border-default-medium !default;
 
 .header-wrapper .header {
   display: flex;
@@ -56,11 +69,11 @@ $header-text-color-hover: $white !default;
           a.item {
             width: 100%;
             padding: 2rem 1.2rem 1.5rem 1.2rem;
-            color: $header-text-color;
+            color: $mobile-menu-text-color;
             font-size: 18px;
 
             &.active {
-              border-bottom: $border-default-medium;
+              border-bottom: $mobile-menu-border;
             }
           }
         }
@@ -103,8 +116,8 @@ $header-text-color-hover: $white !default;
         border-radius: 50%;
         background-color: transparent;
         transition:
-          background-color 200ms ease-in-out,
-          color 300ms ease-in-out;
+                background-color 200ms ease-in-out,
+                color 300ms ease-in-out;
 
         svg {
           transition: transform 300ms ease-in-out;
@@ -138,8 +151,8 @@ $header-text-color-hover: $white !default;
         padding-top: 2rem;
         background-color: $header-background-color;
         transition:
-          top 500ms ease-in-out,
-          height 600ms ease-in-out;
+                top 500ms ease-in-out,
+                height 600ms ease-in-out;
         transition-property: top, height;
 
         &.active {
@@ -164,7 +177,7 @@ $header-text-color-hover: $white !default;
               justify-content: space-between;
               padding-top: 0;
               padding-bottom: 0.5rem;
-              border-bottom: $border-default-small;
+              border-bottom: $search-border;
               border-left: none;
               margin-left: 12.6rem;
 
@@ -292,7 +305,7 @@ $header-text-color-hover: $white !default;
       position: absolute;
       bottom: -49px;
       width: 100%;
-      border-bottom: $border-default-x-large;
+      border-bottom: $desktop-menu-border;
       content: '';
     }
   }
@@ -322,7 +335,7 @@ $header-text-color-hover: $white !default;
       padding-top: 20px;
       padding-bottom: 6px;
       border: none;
-      border-bottom: $border-transparent-x-large;
+      border-bottom: $desktop-menu-transparent-border;
       margin: 0;
       margin-left: 20px;
       background: none;
@@ -411,7 +424,7 @@ $header-text-color-hover: $white !default;
         color: $header-text-color;
         cursor: pointer;
         &:focus {
-          outline: $border-default;
+          outline: $header-outline;
         }
       }
 
@@ -431,7 +444,7 @@ $header-text-color-hover: $white !default;
           width: 20%;
           padding: 0 20px 0 10px;
           padding-left: 25px;
-          border-left: $border-default;
+          border-left: $header-border-default;
 
           /* This is for tablet landscape mode */
           @media only screen and (min-width: 1011px) and (max-width: 1280px) {
@@ -510,7 +523,7 @@ $header-text-color-hover: $white !default;
         }
 
         span:hover {
-          border-bottom: $border-default;
+          border-bottom: $header-border-default;
         }
       }
     }
@@ -580,7 +593,7 @@ $header-text-color-hover: $white !default;
     left: -50px;
     width: 0;
     height: 100%;
-    border-left: $border-default-x-large;
+    border-left: $desktop-menu-border;
     content: '';
   }
 
@@ -691,7 +704,7 @@ $header-text-color-hover: $white !default;
 
     li a {
       display: inline !important;
-      color: $interactive-color;
+      color: $interactive;
       text-decoration: underline;
     }
 
@@ -753,7 +766,7 @@ $header-text-color-hover: $white !default;
       align-items: center;
       justify-content: space-between;
       padding: 20px 0;
-      border-bottom: $border-default;
+      border-bottom: $header-border-default;
       margin-left: 20px;
       color: $header-text-color;
       line-height: 24px;
@@ -775,7 +788,7 @@ $header-text-color-hover: $white !default;
         border-bottom: 0;
 
         &.last-child {
-          border-bottom: $border-default;
+          border-bottom: $header-border-default;
         }
       }
     }
@@ -829,8 +842,8 @@ $header-text-color-hover: $white !default;
   opacity: 1;
   /* transform: translate(0%, 0%); */
   transition:
-    transform 0.5s cubic-bezier(0.09, 0.11, 0.24, 0.91),
-    opacity 500ms;
+          transform 0.5s cubic-bezier(0.09, 0.11, 0.24, 0.91),
+          opacity 500ms;
   visibility: visible;
 }
 
@@ -843,8 +856,8 @@ $header-text-color-hover: $white !default;
   opacity: 1;
   /* transform: translate(0%, 0%); */
   transition:
-    transform 0.5s cubic-bezier(0.09, 0.11, 0.24, 0.91),
-    opacity 500ms;
+          transform 0.5s cubic-bezier(0.09, 0.11, 0.24, 0.91),
+          opacity 500ms;
   visibility: visible;
 }
 
@@ -852,6 +865,6 @@ $header-text-color-hover: $white !default;
   opacity: 0;
   /* transform: translate(-100%, 0%); */
   transition:
-    transform 0.5s cubic-bezier(0.09, 0.11, 0.24, 0.91),
-    opacity 500ms;
+          transform 0.5s cubic-bezier(0.09, 0.11, 0.24, 0.91),
+          opacity 500ms;
 }
