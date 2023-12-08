@@ -57,7 +57,6 @@
       a {
         .listing-body {
           h2 {
-            color: $black;
             @include text-heading-h2();
           }
           p {
@@ -90,7 +89,6 @@
       h3 {
         margin-top: 0 !important;
         margin-bottom: 40px !important;
-        color: $black;
         @include text-heading-h2();
         @container (max-width: #{$largest-mobile-screen}) {
           @include text-heading-h3();
