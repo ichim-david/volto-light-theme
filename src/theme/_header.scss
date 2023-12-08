@@ -116,8 +116,8 @@ $mobile-menu-border: $border-default-medium !default;
         border-radius: 50%;
         background-color: transparent;
         transition:
-                background-color 200ms ease-in-out,
-                color 300ms ease-in-out;
+          background-color 200ms ease-in-out,
+          color 300ms ease-in-out;
 
         svg {
           transition: transform 300ms ease-in-out;
@@ -151,8 +151,8 @@ $mobile-menu-border: $border-default-medium !default;
         padding-top: 2rem;
         background-color: $header-background-color;
         transition:
-                top 500ms ease-in-out,
-                height 600ms ease-in-out;
+          top 500ms ease-in-out,
+          height 600ms ease-in-out;
         transition-property: top, height;
 
         &.active {
@@ -842,8 +842,8 @@ $mobile-menu-border: $border-default-medium !default;
   opacity: 1;
   /* transform: translate(0%, 0%); */
   transition:
-          transform 0.5s cubic-bezier(0.09, 0.11, 0.24, 0.91),
-          opacity 500ms;
+    transform 0.5s cubic-bezier(0.09, 0.11, 0.24, 0.91),
+    opacity 500ms;
   visibility: visible;
 }
 
@@ -856,8 +856,8 @@ $mobile-menu-border: $border-default-medium !default;
   opacity: 1;
   /* transform: translate(0%, 0%); */
   transition:
-          transform 0.5s cubic-bezier(0.09, 0.11, 0.24, 0.91),
-          opacity 500ms;
+    transform 0.5s cubic-bezier(0.09, 0.11, 0.24, 0.91),
+    opacity 500ms;
   visibility: visible;
 }
 
@@ -865,6 +865,6 @@ $mobile-menu-border: $border-default-medium !default;
   opacity: 0;
   /* transform: translate(-100%, 0%); */
   transition:
-          transform 0.5s cubic-bezier(0.09, 0.11, 0.24, 0.91),
-          opacity 500ms;
+    transform 0.5s cubic-bezier(0.09, 0.11, 0.24, 0.91),
+    opacity 500ms;
 }
