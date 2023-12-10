@@ -13,6 +13,7 @@ $search-border: $border-default-small !default;
 // Menu
 $desktop-menu-text-color: $header-text-color !default;
 $desktop-menu-border: $border-default-x-large !default;
+$desktop-menu-border-hover: $border-default !default;
 $desktop-menu-transparent-border: $border-transparent-x-large !default;
 
 $mobile-menu-background-color: $lightgrey !default;
@@ -307,7 +308,7 @@ $mobile-menu-border: $border-default-medium !default;
       position: absolute;
       bottom: -49px;
       width: 100%;
-      border-bottom: $desktop-menu-border;
+      border-bottom: $desktop-menu-border-hover;
       content: '';
     }
   }
@@ -402,7 +403,7 @@ $mobile-menu-border: $border-default-medium !default;
           li {
             padding: 0;
             padding-bottom: 10px;
-            color: $header-text-color-hover;
+            color: $desktop-menu-text-color;
 
             a {
               font-size: 14px;
@@ -525,7 +526,7 @@ $mobile-menu-border: $border-default-medium !default;
         }
 
         span:hover {
-          border-bottom: $header-border-default;
+          border-bottom: $desktop-menu-border-hover;
         }
       }
     }
@@ -756,7 +757,7 @@ $mobile-menu-border: $border-default-medium !default;
   ul.sections {
     padding: 0 30px;
     margin-top: 0;
-    color: $header-text-color-hover;
+    color: $mobile-menu-text-color;
     font-size: 20px;
     list-style: none;
 
@@ -798,7 +799,7 @@ $mobile-menu-border: $border-default-medium !default;
       width: 100%;
       align-items: center;
       justify-content: space-between;
-      color: $header-text-color;
+      color: $mobile-menu-text-color;
       line-height: 36px;
     }
 
@@ -812,7 +813,7 @@ $mobile-menu-border: $border-default-medium !default;
         padding: 20px 0 0 10px;
         border: 0px;
         background: transparent;
-        color: $header-text-color;
+        color: $mobile-menu-text-color;
         cursor: pointer;
 
         span {
