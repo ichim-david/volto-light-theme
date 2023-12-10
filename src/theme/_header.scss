@@ -14,6 +14,8 @@ $search-border: $border-default-small !default;
 $desktop-menu-text-color: $header-text-color !default;
 $desktop-menu-border: $border-default-x-large !default;
 $desktop-menu-transparent-border: $border-transparent-x-large !default;
+
+$mobile-menu-background-color: $lightgrey !default;
 $mobile-menu-text-color: $header-text-color !default;
 $mobile-menu-border: $border-default-medium !default;
 
@@ -634,8 +636,7 @@ $mobile-menu-border: $border-default-medium !default;
   flex-direction: column;
   padding-bottom: 80px;
   /* line-height: 70px; */
-  background-color: $header-background-color;
-  //color: #fffffe; // white on gray bg cannot be read
+  background-color: $mobile-menu-background-color;
   font-size: 20px;
   font-weight: 200;
   letter-spacing: 0.3px;
@@ -753,7 +754,6 @@ $mobile-menu-border: $border-default-medium !default;
   }
 
   ul.sections {
-    width: 100%;
     padding: 0 30px;
     margin-top: 0;
     color: $header-text-color-hover;
@@ -768,7 +768,7 @@ $mobile-menu-border: $border-default-medium !default;
       padding: 20px 0;
       border-bottom: $header-border-default;
       margin-left: 20px;
-      color: $header-text-color;
+      color: $mobile-menu-text-color;
       line-height: 24px;
 
       .icon:hover {
@@ -813,6 +813,7 @@ $mobile-menu-border: $border-default-medium !default;
         border: 0px;
         background: transparent;
         color: $header-text-color;
+        cursor: pointer;
 
         span {
           display: inline-block;
