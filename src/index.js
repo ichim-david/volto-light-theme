@@ -28,7 +28,6 @@ import { searchBlockSchemaEnhancer } from './components/Blocks/Search/schema';
 import gridSVG from './icons/block_icn_grid.svg';
 import accordionSVG from './icons/block_icn_accordion.svg';
 import EventView from './components/Theme/EventView';
-import { tocBlockSchemaEnhancer } from './components/Blocks/Toc/schema';
 import { mapsBlockSchemaEnhancer } from './components/Blocks/Maps/schema';
 import { sliderBlockSchemaEnhancer } from './components/Blocks/Slider/schema';
 
@@ -312,7 +311,6 @@ const applyConfig = (config) => {
   // TOC Block
   config.blocks.blocksConfig.toc = {
     ...config.blocks.blocksConfig.toc,
-    schemaEnhancer: composeSchema(tocBlockSchemaEnhancer, defaultStylingSchema),
     // remove horizontal variation
     variations: [config.blocks.blocksConfig.toc.variations[0]],
   };
